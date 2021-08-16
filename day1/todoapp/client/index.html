@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title> To Do List</title>
+</head>
+<body>
+    <label for="taskInput">>>>>>To Do List>>>>>></label>
+    <input type="text" id = "taskTextBox" placeholder="enter task here">
+    
+    <label for="priority">Choose a priority level:</label>
+    <select name="taskpriority" id="priority">
+        <option value="" disabled selected>priority</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+    </select>
+    <input type="date" id="dateinput">
+    <button id = "addTaskbtn">Add Task</button>
+    <ul id = "todolistUL"></ul>
+
+    <script src = "app.js"></script>
+</body>
+</html>
