@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="/css/travel.css">
+    </head>
+    <body>
+    <div class="container-fluid">
+        <h1>Trips</h1>
+        <a href="/add-trip">Add Trip</a>
+        <h3>Total Number of Trips: {{totalTrips}}</h3>
+        
+            {{#allTrips}} 
+            <form method = "POST" action = "/delete-trip">
+                <input type = "hidden" value = {{tripID}} name = "tripID">
+                 <button type = "submit">Delete Trip!</button>
+                <div class="card-group">
+                <div class="card">
+                <img src="{{imageURL}}" class="card-img-top" alt="...">
+                 <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text"> Date of Departure:{{dateofDeparture}}</p>
+                    <p class="card-text"> Date of Return:{{dateofReturn}}</p>
+                    
+            </form>
+                 {{/allTrips}}   
+            </div>
+           
+
+  </div>
+  </div>
+</div>
+    </body>
+</html>
