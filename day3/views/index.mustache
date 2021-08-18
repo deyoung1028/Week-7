@@ -1,0 +1,47 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <h1>Movies</h1>
+      
+     <h2>Add a Movie</h2>
+         <form method="POST" action="/create">
+            <input type="text" placeholder="Enter movie title" name="title" />       
+             <label for="genre">Select a Genre:</label>
+                    <select name="genre" id="movie">
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="horror">Horror</option>
+                    <option value="musical">Musical</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                </select>
+                <input type = 'text' name = 'posterURL' placeholder='enter poster url'>     
+            <button id = 'submitbtn'>Add Movie!</button>
+        </form>
+        
+     
+        <ul id = 'moviesUL'>
+            <h3>Movie List</h3>
+            {{#allMovies}}
+            <li id =moviesli'>
+                <form method='post' action ='/delete-movie'>
+                <a href = '/movies/{{movieID}}'><img src="{{posterURL}}"alt=""></a>
+                <h3 id = "movieTitle">{{title}}</h3>
+                <input type = "hidden" value = {{movieID}} name = "movieID">
+                <button id = "deletebtn">DELETE</button>
+                </li>
+                </form>
+
+            {{/allMovies}}
+    </ul>
+
+       
+</body>
+<script></script>
+</html>
