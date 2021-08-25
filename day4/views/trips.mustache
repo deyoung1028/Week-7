@@ -7,23 +7,21 @@
         {{>menu}}
     <div class="container-fluid">
         <h1>WELCOME {{userName}} to your trips page!</h1>
-       
-        <h3>Total Number of Trips: {{totalTrips}}</h3>
-        
-            {{#allTrips}} 
-            <form method = "POST" action = "/delete-trip">
-                <input type = "hidden" value = {{tripID}} name = "tripID">
+               
+            {{#trips}} 
+            <form method = "POST" action = "trips/delete-trip">
+                <input type = "hidden" value = {{trip_id}} name = "tripID">
                  <button type = "submit">Delete Trip!</button>
                 <div class="card-group">
                 <div class="card">
-                <img src="{{imageURL}}" class="card-img-top" alt="...">
+                <img src="{{imageurl}}" class="card-img-top" alt="...">
                  <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
-                    <p class="card-text"> Date of Departure:{{dateofDeparture}}</p>
-                    <p class="card-text"> Date of Return:{{dateofReturn}}</p>
+                    <p class="card-text"> Date of Departure:{{date_of_departure}}</p>
+                    <p class="card-text"> Date of Return:{{date_of_return}}</p>
                     
             </form>
-                 {{/allTrips}}   
+                 {{/trips}}   
             </div>
            
 
